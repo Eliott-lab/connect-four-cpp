@@ -103,7 +103,7 @@ bool play(std::vector<int>& grid,const int& symbol,const int& y_axis,const int& 
             break;
         }
     }
-    if (smallest_empty_cell<0) // if the column is already full we return false and do nothing
+    if ((smallest_empty_cell<0)||(column_played > y_axis)||(column_played == 0 )) // if the column is already full or the user input are to big or to small we return false and do nothing
     {
         return false;
     }
